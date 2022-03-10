@@ -1,5 +1,11 @@
 package com.example.springauthservice.auth.repository;
 
-public class RefreshTokenRepository {
+import java.util.UUID;
+
+import com.example.springauthservice.auth.entity.RefreshToken;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RefreshTokenRepository extends JpaRepository<RefreshToken, UUID>{
     
 }
