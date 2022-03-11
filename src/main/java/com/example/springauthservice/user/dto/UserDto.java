@@ -1,35 +1,66 @@
 package com.example.springauthservice.user.dto;
 
-public class UserDto {
-    public class CreateUserDto{
-        private String username;
-        private String email;
-        private String firstname;
-        private String surname;
-        private String password;
+import java.io.Serializable;
+import java.util.UUID;
 
-        public String getUsername(){
-            return username;
-        }
+import com.example.springauthservice.user.entity.User;
 
-        public String getEmail(){
-            return email;
-        }
+public class UserDto implements Serializable {
 
-        public String getFirstname(){
-            return firstname;
-        }
-
-        public String getSurname(){
-            return surname;
-        }
-
-        public String getPassword(){
-            return password;
+    public UserDto(User user){
+        if(user != null){
+            this.id = user.getId();
+            this.email = user.getEmail();
+            this.username = user.getUsername();
+            this.firstname = user.getFirstname();
+            this.surname = user.getSurname();
         }
     }
+    private UUID id;
+    private String username;
+    private String email;
+    private String firstname;
+    private String surname;
 
-    
+    public UUID getId() {
+        return id;
+    }
+
+    public String getUsername(){
+        return username;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public String getFirstname(){
+        return firstname;
+    }
+
+    public String getSurname(){
+        return surname;
+    }
+
+        // public String getUsername(){
+        //     return username;
+        // }
+
+        // public String getEmail(){
+        //     return email;
+        // }
+
+        // public String getFirstname(){
+        //     return firstname;
+        // }
+
+        // public String getSurname(){
+        //     return surname;
+        // }
+
+        // public String getPassword(){
+        //     return password;
+        // }
 }
 
 

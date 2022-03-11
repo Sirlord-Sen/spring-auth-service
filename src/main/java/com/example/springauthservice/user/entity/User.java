@@ -5,12 +5,18 @@ import java.util.UUID;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import lombok.Data;
+
 @Entity
 @Table(name = "users")
+@Data
 public class User {
     @Id
     @GeneratedValue(generator = "UUID")
@@ -30,16 +36,20 @@ public class User {
     @Column()
     private String surname;
 
+    @JsonProperty(access = Access.WRITE_ONLY)
     @Column()
     private String password;
 
+    @JsonProperty(access = Access.WRITE_ONLY)
     @Column()
     private String confirmTokenPassword;
 
+    @JsonProperty(access = Access.WRITE_ONLY)
     @CreationTimestamp
     @Column()
     private Date created_at;
 
+    @JsonProperty(access = Access.WRITE_ONLY)
     @UpdateTimestamp
     @Column()
     private Date updated_at;
