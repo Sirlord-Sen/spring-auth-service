@@ -1,6 +1,6 @@
-package com.example.springauthservice.user.dto.responses;
+package com.example.springauthservice.modules.user.dto.responses;
 
-import com.example.springauthservice.user.entity.User;
+import com.example.springauthservice.modules.user.entity.User;
 
 public class UserResponseDto {
 

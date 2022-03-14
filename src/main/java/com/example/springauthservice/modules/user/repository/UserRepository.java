@@ -1,8 +1,8 @@
-package com.example.springauthservice.user.repository;
+package com.example.springauthservice.modules.user.repository;
 
 import java.util.UUID;
 
-import com.example.springauthservice.user.entity.User;
+import com.example.springauthservice.modules.user.entity.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,9 +1,9 @@
-package com.example.springauthservice.user.controller;
+package com.example.springauthservice.modules.user.controller;
 
-import com.example.springauthservice.user.dto.RegisterUserDto;
-import com.example.springauthservice.user.dto.responses.UserResponseDto;
-import com.example.springauthservice.user.entity.User;
-import com.example.springauthservice.user.service.UserService;
+import com.example.springauthservice.modules.user.dto.RegisterUserDto;
+import com.example.springauthservice.modules.user.dto.responses.UserResponseDto;
+import com.example.springauthservice.modules.user.entity.User;
+import com.example.springauthservice.modules.user.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,8 +1,6 @@
-package com.example.springauthservice.auth.controller;
+package com.example.springauthservice.modules.auth.controller;
 
-import com.example.springauthservice.auth.dto.AuthDto.LoginDto;
-// import com.example.springauthservice.auth.service.AuthService;
-// import com.example.springauthservice.auth.service.TokenService;
+import com.example.springauthservice.modules.auth.dto.AuthDto.LoginDto;
 
 // import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

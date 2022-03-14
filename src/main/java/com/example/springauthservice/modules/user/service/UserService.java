@@ -1,8 +1,8 @@
-package com.example.springauthservice.user.service;
+package com.example.springauthservice.modules.user.service;
 
-import com.example.springauthservice.user.dto.RegisterUserDto;
-import com.example.springauthservice.user.entity.User;
-import com.example.springauthservice.user.repository.UserRepository;
+import com.example.springauthservice.modules.user.dto.RegisterUserDto;
+import com.example.springauthservice.modules.user.entity.User;
+import com.example.springauthservice.modules.user.repository.UserRepository;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

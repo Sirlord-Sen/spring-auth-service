@@ -1,9 +1,9 @@
-package com.example.springauthservice.user.dto;
+package com.example.springauthservice.modules.user.dto;
 
 import java.io.Serializable;
 import java.util.UUID;
 
-import com.example.springauthservice.user.entity.User;
+import com.example.springauthservice.modules.user.entity.User;
 
 public class UserDto implements Serializable {
 

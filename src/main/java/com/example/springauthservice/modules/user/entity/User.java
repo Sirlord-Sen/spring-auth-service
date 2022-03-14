@@ -1,4 +1,4 @@
-package com.example.springauthservice.user.entity;
+package com.example.springauthservice.modules.user.entity;
 
 import java.util.Date;
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package com.example.springauthservice.user.dto;
+package com.example.springauthservice.modules.user.dto;
 
 import java.io.Serializable;
 

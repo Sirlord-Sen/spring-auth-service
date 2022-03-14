@@ -1,9 +1,9 @@
-package com.example.springauthservice.user.dto.responses;
+package com.example.springauthservice.modules.user.dto.responses;
 
 import java.io.Serializable;
 
-import com.example.springauthservice.user.dto.UserDto;
-import com.example.springauthservice.user.entity.User;
+import com.example.springauthservice.modules.user.dto.UserDto;
+import com.example.springauthservice.modules.user.entity.User;
 
 public class ResponseDto implements Serializable{
     

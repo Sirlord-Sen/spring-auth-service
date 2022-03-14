@@ -1,4 +1,4 @@
-package com.example.springauthservice.auth.dto;
+package com.example.springauthservice.modules.auth.dto;
 
 public class AuthDto {
     public class LoginDto{

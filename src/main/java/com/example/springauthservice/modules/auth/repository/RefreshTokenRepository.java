@@ -1,8 +1,8 @@
-package com.example.springauthservice.auth.repository;
+package com.example.springauthservice.modules.auth.repository;
 
 import java.util.UUID;
 
-import com.example.springauthservice.auth.entity.RefreshToken;
+import com.example.springauthservice.modules.auth.entity.RefreshToken;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
