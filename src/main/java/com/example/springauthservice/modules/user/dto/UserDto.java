@@ -42,25 +42,6 @@ public class UserDto implements Serializable {
         return surname;
     }
 
-        // public String getUsername(){
-        //     return username;
-        // }
-
-        // public String getEmail(){
-        //     return email;
-        // }
-
-        // public String getFirstname(){
-        //     return firstname;
-        // }
-
-        // public String getSurname(){
-        //     return surname;
-        // }
-
-        // public String getPassword(){
-        //     return password;
-        // }
 }
 
 

@@ -1,7 +1,9 @@
 package com.example.springauthservice.modules.user.controller;
 
-import com.example.springauthservice.modules.user.dto.RegisterUserDto;
-import com.example.springauthservice.modules.user.dto.responses.UserResponseDto;
+import javax.validation.Valid;
+
+import com.example.springauthservice.modules.user.dto.UserDto;
+import com.example.springauthservice.modules.user.dto.requests.RegisterUserDto;
 import com.example.springauthservice.modules.user.entity.User;
 import com.example.springauthservice.modules.user.service.UserService;
 
@@ -21,10 +23,10 @@ public class UserContoller {
     private UserService userService;
 
     @PostMapping
-    public ResponseEntity<UserResponseDto> signup(@RequestBody RegisterUserDto body){
+    public ResponseEntity<UserDto> signup(@Valid @RequestBody RegisterUserDto body){
         User user = this.userService.signup(body);
-        UserResponseDto response = new UserResponseDto(user, "User Created");
-        return new ResponseEntity<UserResponseDto>(response, null, HttpStatus.CREATED);
+        UserDto response = new UserDto(user);
+        return new ResponseEntity<UserDto>(response, null, HttpStatus.CREATED);
     }
 
 }

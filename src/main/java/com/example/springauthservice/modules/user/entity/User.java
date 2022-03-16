@@ -12,6 +12,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import de.mkammerer.argon2.Argon2;
+import de.mkammerer.argon2.Argon2Factory;
 import lombok.Data;
 
 @Entity
@@ -27,7 +29,7 @@ public class User {
     @Column()
     private String username;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String email;
 
     @Column()
@@ -92,7 +94,9 @@ public class User {
     }
 
     public void setPassword(String password){
-        this.password = password;
+        Argon2 argon = Argon2Factory.create();
+        char[] passwordChar = password.toCharArray();
+        this.password = argon.hash(22, 65536, 1, passwordChar);
     }
 
     public String getPassword(){
