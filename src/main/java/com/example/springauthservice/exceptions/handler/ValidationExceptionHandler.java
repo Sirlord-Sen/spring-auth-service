@@ -34,6 +34,6 @@ public class ValidationExceptionHandler extends ResponseEntityExceptionHandler{
 			messages.add(fieldName + " " + message);
 		});
         errors.put("errors", messages);
-		return new ResponseEntity<Object>(new ErrorModel(HttpStatus.BAD_REQUEST.value(), messages.get(1)), HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<Object>(new ErrorModel(HttpStatus.BAD_REQUEST.value(), messages.get(0)), HttpStatus.BAD_REQUEST);
 	}
 }
