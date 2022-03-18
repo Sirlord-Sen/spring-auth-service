@@ -4,7 +4,7 @@ import javax.validation.Valid;
 
 import com.example.springauthservice.modules.auth.dto.requests.LoginDto;
 import com.example.springauthservice.modules.auth.service.AuthService;
-// import com.example.springauthservice.modules.auth.service.TokenService;
+import com.example.springauthservice.modules.auth.service.TokenService;
 import com.example.springauthservice.modules.user.dto.UserDto;
 import com.example.springauthservice.modules.user.entity.User;
 
@@ -21,12 +21,14 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
-    // @Autowired
-    // private TokenService tokenService;
+    @Autowired
+    private TokenService tokenService;
 
     @PostMapping("/login")
     public ResponseEntity<UserDto> login(@Valid @RequestBody LoginDto body){
         User user = this.authService.login(body);
+        String tokens = this.tokenService.generatedAccessToken(user);
+        System.out.println(tokens);
         return new ResponseEntity<UserDto>(new UserDto(user), null, HttpStatus.ACCEPTED);
     }
 
